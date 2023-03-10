@@ -2,7 +2,7 @@ from datetime import datetime
 from dataclasses import dataclass , field
 from typing import Optional
 
-@dataclass() #init,repr, eq
+@dataclass() #init,repr, eq dataclass
 class Category:
 
     name: str
