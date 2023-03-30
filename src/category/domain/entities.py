@@ -13,7 +13,7 @@ import uuid
 
 # ter que ser imutavel -> objeto de valor
 
-@dataclass(kw_only=True) #init,repr, eq dataclass
+@dataclass(kw_only=True, frozen=True) #init,repr, eq dataclass
 class Category:
 
     id: uuid.UUID = field(
@@ -25,5 +25,3 @@ class Category:
     created_at: Optional[datetime] = field(
         default_factory=lambda: datetime.now()
     )
-
-
