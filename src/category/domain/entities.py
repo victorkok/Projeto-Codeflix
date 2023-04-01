@@ -1,7 +1,7 @@
 from datetime import datetime
 from dataclasses import dataclass , field
 from typing import Optional
-import uuid
+from __seedwork.domain.entities import Entity
 
 
 #entidade - conjunto de atributos + entidades + objetos de valores | identificação + operaçoes
@@ -14,11 +14,9 @@ import uuid
 # ter que ser imutavel -> objeto de valor
 
 @dataclass(kw_only=True, frozen=True) #init,repr, eq dataclass
-class Category:
+class Category(Entity):
 
-    id: uuid.UUID = field(
-        default_factory=lambda: uuid.uuid4()
-    )
+
     name: str
     description: Optional[str] = None
     is_active: Optional[bool] = True
