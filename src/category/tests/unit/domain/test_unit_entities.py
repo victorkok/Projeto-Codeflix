@@ -9,7 +9,7 @@ class TestCategoryUnit(unittest.TestCase):
     def test_if_is_a_dataclass(self):
         self.assertTrue(is_dataclass(Category))
 
-    def test_Constructor(self):  # sourcery skip: extract-duplicate-method
+    def test_Constructor(self):  #sourcery skip: extract-duplicate-method
         category = Category(name='Movie')
         self.assertEqual(category.name, 'Movie')
         self.assertEqual(category.description, None)
