@@ -39,7 +39,11 @@
 			"extensions": [
 				"ms-python.python",
 				"sourcery.sourcery"
-			]
+			],
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "zsh",
+				"python.pythonPath": "/usr/local/bin/python"
+			}
 		}
 	}
 }
