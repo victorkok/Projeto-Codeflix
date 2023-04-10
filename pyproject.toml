@@ -1,0 +1,14 @@
+[tool.pdm]
+
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "Victor Kokado", email = "victornerikokado@yahoo.com"},
+]
+dependencies = [
+    "autopep8>=2.0.2",
+]
+requires-python = ">=3.10.2"
+license = {text = "MIT"}

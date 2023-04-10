@@ -6,10 +6,12 @@ import unittest
 from __seedwork.domain.entities import Entity
 from __seedwork.domain.value_objects import UniqueEntityId, ValueObject
 
+
 @dataclass(frozen=True, kw_only=True)
 class StubEntity(Entity):
     prop1: str
     prop2: str
+
 
 class TestEntityUnit(unittest.TestCase):
 
@@ -28,7 +30,8 @@ class TestEntityUnit(unittest.TestCase):
 
     def test_accept_a_valid_uuid(self):
         entity = StubEntity(
-            unique_entity_id=UniqueEntityId('10aeb3b3-12f9-4cc7-9e1c-72f4b3f03a6d'),
+            unique_entity_id=UniqueEntityId(
+                '10aeb3b3-12f9-4cc7-9e1c-72f4b3f03a6d'),
             prop1='value1',
             prop2='value2',
         )
@@ -37,7 +40,8 @@ class TestEntityUnit(unittest.TestCase):
 
     def test_to_dict_method(self):
         entity = StubEntity(
-            unique_entity_id=UniqueEntityId('10aeb3b3-12f9-4cc7-9e1c-72f4b3f03a6d'),
+            unique_entity_id=UniqueEntityId(
+                '10aeb3b3-12f9-4cc7-9e1c-72f4b3f03a6d'),
             prop1='value1',
             prop2='value2',
         )
