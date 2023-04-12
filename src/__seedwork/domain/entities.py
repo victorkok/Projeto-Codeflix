@@ -5,7 +5,7 @@ from dataclasses import field, dataclass, asdict
 from __seedwork.domain.value_objects import UniqueEntityId
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, slots=True)
 class Entity(ABC):
 
     #pylint: disable=unnecessary-lambda

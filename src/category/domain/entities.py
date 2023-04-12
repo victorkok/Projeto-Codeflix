@@ -4,7 +4,7 @@ from typing import Optional
 from __seedwork.domain.entities import Entity
 
 
-@dataclass(kw_only=True, frozen=True)  # init,repr, eq dataclass
+@dataclass(kw_only=True, frozen=True, slots=True)  # init,repr, eq dataclass
 class Category(Entity):
 
     name: str

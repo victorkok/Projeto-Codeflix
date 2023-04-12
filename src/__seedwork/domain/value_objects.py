@@ -7,7 +7,7 @@ from __seedwork.domain.exceptions import InvalidUuidException
 # ABC - Abstract Base Class
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, slots=True)
 class ValueObject(ABC):
 
     def __str__(self) -> str:
