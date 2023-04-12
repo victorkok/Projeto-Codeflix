@@ -47,3 +47,4 @@ class TestCategoryUnit(unittest.TestCase):
         with self.assertRaises(FrozenInstanceError):
             value_object = Category(name='test')
             value_object.name = 'fake name'
+
