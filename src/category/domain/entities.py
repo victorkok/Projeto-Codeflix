@@ -18,3 +18,9 @@ class Category(Entity):
     def update_category(self,name,description):
         object.__setattr__(self,'name',name)
         object.__setattr__(self,'description',description)
+
+    def activate(self):
+        object.__setattr__(self,'is_active',True)
+    
+    def deactivate(self):
+        object.__setattr__(self,'is_active',False)
