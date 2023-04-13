@@ -13,3 +13,8 @@ class Category(Entity):
     created_at: Optional[datetime] = field(
         default_factory=lambda: datetime.now()
     )
+
+
+    def update_category(self,name,description):
+        object.__setattr__(self,'name',name)
+        object.__setattr__(self,'description',description)
