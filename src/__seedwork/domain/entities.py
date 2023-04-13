@@ -17,6 +17,10 @@ class Entity(ABC):
     def id(self):
         return str(self.unique_entity_id)
 
+    def _set(self, name: str, value: any):
+        object.__setattr__(self, name, value)
+        return self
+
     def to_dict(self):
         entity_dict = asdict(self)
         entity_dict.pop('unique_entity_id')

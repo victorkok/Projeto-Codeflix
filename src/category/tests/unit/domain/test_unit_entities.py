@@ -50,9 +50,7 @@ class TestCategoryUnit(unittest.TestCase):
 
     def test_update_category(self):
         category = Category(name='Movie',description='some description')
-        test_name = 'Cars'
-        test_description = 'Corrida'
-        category.update_category(test_name,test_description)
+        category.update_category('Cars','Corrida')
         self.assertEqual(category.name, 'Cars')
         self.assertEqual(category.description, 'Corrida')
 
