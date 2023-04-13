@@ -49,9 +49,19 @@ class TestCategoryUnit(unittest.TestCase):
             value_object.name = 'fake name'
 
     def test_update_category(self):
-        category = Category(name='Movie',description='something')
+        category = Category(name='Movie',description='some description')
         test_name = 'Cars'
         test_description = 'Corrida'
         category.update_category(test_name,test_description)
         self.assertEqual(category.name, 'Cars')
         self.assertEqual(category.description, 'Corrida')
+
+    def test_activate_category(self):
+        category = Category(name='Movie',description='some description')
+        category.activate()
+        self.assertEqual(category.is_active, True)
+
+    def test_deactivate_category(self):
+        category = Category(name='Movie',description='some description')
+        category.deactivate()
+        self.assertEqual(category.is_active, False)
